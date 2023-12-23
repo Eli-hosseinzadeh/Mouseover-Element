@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover Effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mouseover-container">
+        <div class="mouseover-element" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
+            Hover me!
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.mouseover-container {
+    text-align: center;
+}
+
+.mouseover-element {
+    padding: 20px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.mouseover-element:hover {
+    background-color: #e74c3c;
+}
+function changeColor(element) {
+    element.style.backgroundColor = '#2ecc71';
+}
+
+function resetColor(element) {
+    element.style.backgroundColor = '#3498db';
+}
